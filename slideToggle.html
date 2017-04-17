@@ -5,7 +5,12 @@
 <script type="text/javascript"> 
 $(document).ready(function(){
 $(".flip").click(function(){
-    $(".panel").slideToggle("slow");
+    $(".panel").slideToggle(5000,function(){
+      alert("slideToggle");
+    });
+  });
+$("#stop").click(function(){
+    $(".panel").stop();
   });
 });
 </script>
@@ -28,6 +33,7 @@ display:none;
 </head>
  
 <body>
+<button id="stop">停止滑动</button>
 <p class="flip">离思</p>
 <div class="panel">
 <p>曾经沧海难为水</p>
