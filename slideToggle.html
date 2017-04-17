@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/Users/helloyou/node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+$(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+});
+</script>
+ 
+<style type="text/css"> 
+div.panel,p.flip
+{
+margin:0px;
+padding:5px;
+text-align:center;
+background:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+div.panel
+{
+height:160px;
+display:none;
+}
+</style>
+</head>
+ 
+<body>
+<p class="flip">离思</p>
+<div class="panel">
+<p>曾经沧海难为水</p>
+<p>除却巫山不是云</p>
+<p>取次花丛懒回顾</p>
+<p>半缘修道半缘君</p>
+</div>
+ 
+
+ 
+</body>
+</html>
