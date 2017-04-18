@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.siblings *
+{ 
+display: block;
+border: 2px solid lightgrey;
+color: lightgrey;
+padding: 5px;
+margin: 15px;
+}
+</style>
+<script src="/Users/helloyou/node_modules/jquery/dist/jquery.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("h2").siblings().css({"color":"red","border":"2px solid red"});
+  $("h2").siblings("p").css({"color":"blue","border":"2px solid blue"});
+  $("h2").next().css({"color":"green","border":"2px solid green"});
+  $("h2").nextAll().css({"color":"purple","border":"2px solid purple"});
+  $("h2").nextUntil("h6").css({"color":"pink","border":"2px solid pink"});
+  // prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，只不过方向相反而已：它们返回的是前面的同胞元素（在 DOM 树中沿着同胞元素向后遍历，而不是向前）。
+});
+</script>
+</head>
+<body class="siblings">
+
+<div>div (父)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+
+</body>
+</html>
